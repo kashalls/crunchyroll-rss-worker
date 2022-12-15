@@ -6,5 +6,5 @@ export default Object.freeze({
     PUBLISH_CHANNEL_ID: '1013991782037602477',
 
     // Keywords you don't want to be updated about.
-    EXCLUDED_KEYWORDS: []
+    EXCLUDED_KEYWORDS: ['Hindi', 'German', 'Portuguese', 'German', 'Russian']
 })
