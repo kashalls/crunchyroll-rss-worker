@@ -8,7 +8,7 @@ export async function sendToDiscord(post, env) {
     const message = {
         username: Config.NAME,
         avatar_url: Config.AVATAR_URL,
-        content: `\n<:crunchyroll:1052806230462185562>  |  **${post.title}**\n\n${post.link}`
+        content: `<:crunchyroll:1052806230462185562>  |  **${post.title}**\n\n${post.link}`
     }
 
     console.log(`Sending POST to Discord with ${JSON.stringify(message)}`)
