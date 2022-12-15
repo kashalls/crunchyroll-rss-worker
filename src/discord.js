@@ -17,7 +17,7 @@ import Config from './config'
 //}
 
 export async function sendToDiscord(post, env) {
-    if (Config.EXCLUDED_KEYWORDS.includes(post)) {
+    if (Config.EXCLUDED_KEYWORDS.some((item) => post.title.includes(item))) {
         return null;
     }
 
