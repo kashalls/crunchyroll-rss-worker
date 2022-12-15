@@ -12,7 +12,7 @@ export default {
                 globalThis.PREVIEW = true;
             }
             attachDebug(req);
-            return await this.scheduled(null, env);
+            await this.scheduled(null, env);
             return new Response('Fired');
         } catch (e) {
             return new Response(e.stack, { status: 500 });
