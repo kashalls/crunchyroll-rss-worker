@@ -53,13 +53,11 @@ export default {
                     await publishMessage(messageId, env)
                 }
 
-
                 if (messageId === null) {
                     console.error('SANITY CHECK: Message ID from postNew is null!!');
                 }
             }
         }))
         return new Response('Okay!');
-        return new Response(JSON.stringify(feed));
     }
 }
