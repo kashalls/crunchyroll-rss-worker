@@ -6,5 +6,23 @@
   },
   "dependencies": {
     "htmlparser2": "^8.0.1"
-  }
+  },
+  "name": "crunchyroll-rss-worker",
+  "description": "Cloudflare worker that posts discord webhook",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev src/index.ts",
+    "publish": "wrangler publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kashalls/crunchyroll-rss-worker.git"
+  },
+  "author": "Jordan Jones (@Kashalls)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kashalls/crunchyroll-rss-worker/issues"
+  },
+  "homepage": "https://github.com/Kashalls/crunchyroll-rss-worker#readme"
 }
