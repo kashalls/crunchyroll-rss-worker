@@ -22,8 +22,8 @@ export async function sendToDiscord(post, env) {
     }
 
     const fields = []
-
-    let description = ''
+    // THIS IS NOT A SAFE WAY TO CLEAN HTML TAGS
+    let description = post.description.replace(/<\/?[^>]+(>|$)/g, "");
 
     const reqObj = {
         username: Config.NAME,
