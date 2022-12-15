@@ -1,3 +1,11 @@
 name = "crunchyroll-rss-worker"
+workers_dev = false
 compatibility_date = "2022-12-14"
 main = "src/index.js"
+
+kv_namespaces = [
+  { binding = "KV", id = "6754798a90db41589de058e7f2a77a6d", preview_id = "b4b6230ed0ef4b4dbf35d738d64b3c20" }
+]
+
+[triggers]
+crons = ["*/5 * * * *"]
