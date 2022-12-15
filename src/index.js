@@ -39,7 +39,7 @@ export default {
 
             console.log(`-----\nRelease: ${item.id} in KV: (${kv !== null})\n-----`)
 
-            if (kv !== null) {
+            if (kv === null) {
                 const messageId = await sendToDiscord(item, env)
 
                 if (messageId !== null) {
