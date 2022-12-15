@@ -40,7 +40,7 @@ export async function sendToDiscord(post, env) {
     console.log(`Sending POST to Discord with ${JSON.stringify(reqObj)}`)
 
     // Always make sure ?wait=true is there so we get the message back from Discord
-    const res = await fetch(env.DISCORD_WEBHOOK + (update ? `/messages/${messageId}?wait=true'` : '?wait=true'), {
+    const res = await fetch(env.DISCORD_WEBHOOK + '?wait=true', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
