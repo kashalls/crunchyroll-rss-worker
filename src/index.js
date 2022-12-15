@@ -32,8 +32,6 @@ export default {
         const text = await rss.text()
         const feed = parseFeed(text)
 
-        console.log(JSON.stringify(feed.items[0]))
-
         await Promise.all(feed.items.map(async item => {
             const kv = await env.KV.get(item.id, 'json')
 
