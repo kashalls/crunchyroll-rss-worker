@@ -57,7 +57,7 @@ export async function sendToDiscord(post, env) {
         console.log(`  Discord message ID: ${body.id}`);
         return body.id;
     } else {
-        // Error :(
+        console.log(res)
         return null;
     }
 }
