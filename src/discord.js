@@ -33,7 +33,7 @@ export async function sendToDiscord(post, env) {
             title: `${post.title}`,
             url: post.link,
             description,
-            timestamp: new Date().toISOString()
+            timestamp: post.pubDate
         }]
     }
 
