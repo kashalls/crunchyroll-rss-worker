@@ -25,19 +25,13 @@ export async function sendToDiscord(post, env) {
     // THIS IS NOT A SAFE WAY TO CLEAN HTML TAGS
     let description = post.description.replace(/<\/?[^>]+(>|$)/g, "");
 
-    const reqObj = {
+    const message = {
         username: Config.NAME,
         avatar_url: Config.AVATAR_URL,
-        embeds: [{
-            type: 'rich',
-            title: `${post.title}`,
-            url: post.link,
-            description,
-            timestamp: post.pubDate
-        }]
+        content: `<:crunchyroll:1052806230462185562> | **${post.title}**\n\n${post.link}`
     }
 
-    console.log(`Sending POST to Discord with ${JSON.stringify(reqObj)}`)
+    console.log(`Sending POST to Discord with ${JSON.stringify(message)}`)
 
     // Always make sure ?wait=true is there so we get the message back from Discord
     const res = await fetch(env.DISCORD_WEBHOOK + '?wait=true', {
@@ -45,7 +39,7 @@ export async function sendToDiscord(post, env) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(reqObj)
+        body: JSON.stringify(message)
     });
     const txt = await res.text();
 
