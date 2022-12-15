@@ -59,7 +59,7 @@ export default {
                 }
             }
         }))
-        console.log(feed)
+        return new Response('Okay!');
         return new Response(JSON.stringify(feed));
     }
 }
